@@ -111,7 +111,7 @@ timeOutput.innerHTML=time;
 nameOutput.innerHTML=data.location.name;
 
 
-const iconId=data.current.condition.icon.substr("//cdn.weatherapi.com/weather/64x64/".length);   
+const iconId=data.current.condition.icon.substr("weather/64x64/".length);   
 
 /*Reformat the data into something more appealing and add it to the page*/
 icon.src="E:/wheatherproject/icons/"+iconId;
@@ -133,7 +133,7 @@ timeOfDay="night";
 
 if(code==1000){
 /*set the background image to clear if the weather is clear*/
-app.style.backgroundImage = "url('E:/wheatherproject/images/"+timeOfDay+"/clear.jpg')";
+app.style.backgroundImage = "url('"+timeOfDay+")";
 /*change the button bg color depending on if its day or night*/
 btn.style.background="#e5ba92";
 if(timeOfDay=="night"){
@@ -154,7 +154,7 @@ code==1276||
 code==1279||                                     
 code==1282)
 { 
-app.style.backgroundImage="url('E:/wheatherproject/images/"+timeOfDay+"/cloudy.jpg')";
+app.style.backgroundImage="url('"+timeOfDay+"/)";
 btn.style.background = "#fa6dlb";
 if(timeOfDay=="night"){
 btn.style.background="#181e27";
@@ -178,14 +178,14 @@ code==1246||
 code==1249||
 code==1252 )
 {
-app.style.backgroundImage="url('E:/wheatherproject/images/"+timeOfDay+"/rainy.jpg')";
+app.style.backgroundImage="url('"+timeOfDay+"/')";
 btn.style.background="#647d75";
 if(timeOfDay=="night"){
 btn.style.background="#325c80";
 }
 /*and finally ....snow*/
 }else{
-app.style.backgroundImage="url('E:/wheatherproject/images/"+timeOfDay+"/snowy.jpg')";
+app.style.backgroundImage="url('"+timeOfDay+"/')";
 btn.style.background="#4d72aa";
 if(timeOfDay=="night"){
 btn.style.background="#1b1b1b";
